@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100vh;
+}
+
+.difficulty_box {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.difficulty_box h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+
+.difficulty_box button {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+.difficulty_box button:hover {
+    background-color: white;
+    color: black;
+}
