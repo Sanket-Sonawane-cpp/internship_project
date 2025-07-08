@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Select a Body part</title>
+  <link rel="stylesheet" href="Body_parts.css" />
+</head>
+
+<body>
+    <div class = "wrapper">
+        <h1>Select a Body part to Train</h1>
+        <div class="button-container">  
+            <button onclick="window.location.href=`data.html?diff=${diff}&focuus=${focuus}&part=Head`">Head</button>
+            <button onclick="window.location.href=`data.html?diff=${diff}&focuus=${focuus}&part=Neck`">Neck</button>
+            <button onclick="window.location.href=`data.html?diff=${diff}&focuus=${focuus}&part=Shoulders`">Shoulders</button>
+            <button onclick="window.location.href=`data.html?diff=${diff}&focuus=${focuus}&part=Chest`">Chest</button>
+            <button onclick="window.location.href=`data.html?diff=${diff}&focuus=${focuus}&part=Back`">Back</button>
+            <button onclick="window.location.href=`data.html?diff=${diff}&focuus=${focuus}&part=Abdomen`">Abdomen</button>
+            <button onclick="window.location.href=`data.html?diff=${diff}&focuus=${focuus}&part=Spine`">Spine</button>
+            <button onclick="window.location.href=`data.html?diff=${diff}&focuus=${focuus}&part=Ankles`">Ankles</button>
+            <button onclick="window.location.href=`http://127.0.0.1:5500/mongo-tut/public/data.html?diff=${diff}`">All</button>
+        </div>
+    </div>
+    <script>
+      const params = new URLSearchParams(window.location.search)
+      const diff = params.get('diff')
+      const focuus = params.get('focuus')
+    </script>
+</body>
+</html>

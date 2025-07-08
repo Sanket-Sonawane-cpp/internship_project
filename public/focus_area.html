@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Focus Area</title>
+    <link rel="stylesheet" href="focus_area_styles.css" />
+</head>
+<body>
+  <div><h1>Choose your Focus Area</h1></div>
+  <div class="box">
+    <button onclick="window.location.href=`Body_parts.html?diff=${diff}&focuus=Muscle`">Muscle Training</button>
+    <button onclick="window.location.href=`Body_parts.html?diff=${diff}&focuus=Bone`">Bone Strengthening</button>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search)
+    const diff = params.get('diff')
+  </script>
+</body>
+</html>

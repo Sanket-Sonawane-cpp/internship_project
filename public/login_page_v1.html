@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="loginPageStyles.css" />
+</head>
+
+<body>
+  <h1 id="tester"></h1>
+  <div class="login-container" id="login-container" style="display: block;">
+    <h2>Login</h2>
+    <form class="form">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" />
+      </div>
+      <button type="submit">Login</button>
+      <p class="other-text">Don't have an account? <a href="#" onclick="switchDiv()">Sign up</a></p>
+      <p class="other-text"><a href="#" onclick="forgotPassword()">Forgot Password</a></p>
+    </form>
+  </div>
+
+  <div class="signUp-container" id="signUp-container" style="display: none;">
+    <h2>Sign Up</h2>
+    <form action="/signUp" method="post">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+      </div>
+      <div class="input-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="input-group">
+        <label for="number">Phone number</label>
+        <input type="tel" id="number" name="number" required />
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <div class="input-group">
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" id="password" name="confirm_password" required />
+      </div>
+      <button type="submit">Sign Up</button>
+      <p class="other-text">Already have an account? <a href="#" onclick="switchDiv()">Login</a></p>
+      <p class="other-text"><a href="#" onclick="forgotPassword()">Forgot Password</a></p>
+    </form>
+  </div>
+
+  <div class="login-container" id="forgotPassword-container" style="display: none;">
+    <h2>Forgot Password</h2>
+    <form action="/forgotPassword" method="post">
+      
+      <div class="input-group">
+        <label for="code">Code</label>
+        <input type="number" id="code" name="code" required />
+      </div>
+      <div class="input-group">
+        <label for="newPassword">New Password</label>
+        <input type="password" id="newPassword" name="newPassword" required />
+      </div>
+      <div class="input-group">
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" id="password" name="confirm_password" required />
+      </div>
+      <button type="submit">Confirm</button>
+      <p class="other-text">Already have an account? <a href="#" onclick="switchDiv()">Login</a></p>
+    </form>
+  </div>
+  <script src="loginPage.js"></script>
+</body>
+</html>
