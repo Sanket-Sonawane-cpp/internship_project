@@ -31,13 +31,23 @@
       </div>
 
       <div class="button-section">
-        <button class = "button_start" onclick="startExercise()">Start Exercise</button>
-        <button class = "button_stop" onclick="stopExercise()">Stop Exercise</button>
+        <button class = "button_start" id="startButton" onclick="this.disabled = true; startExercise()">Start Exercise</button>
+        <button disabled class = "button_stop" id="stopButton" onclick="stopExercise()">Stop Exercise</button>
       </div>
     </div>
   </div>
 
   <script>
+
+    document.getElementById("startButton").addEventListener("click", () => {
+      document.getElementById("stopButton").disabled = false;
+    });
+
+    document.getElementById("stopButton").addEventListener("click", () => {
+      document.getElementById("startButton").disabled = false;
+      document.getElementById("stopButton").disabled = true;
+    });
+
     function startExercise() {
       alert("Exercise started! Get ready!");
     }

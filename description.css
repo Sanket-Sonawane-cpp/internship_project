@@ -86,3 +86,10 @@ body {
       background-color: white;
       color: red;
     }
+
+    button:disabled{
+      color: white;
+      background-color: gray;
+      cursor: not-allowed;  
+      pointer-events: none;
+    }
