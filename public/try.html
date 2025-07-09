@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>URBAN YOGI LIFE</title>
+        <link rel="stylesheet" href="uyl.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="options">
+            <div>
+                <p>HOW CAN WE HELP YOU</p>
+            </div> 
+            <p class="options_btn">Progress</p>
+            <p class="options_btn">Create plan</p>
+            <p class="options_btn">Your Subscriptions</p>
+            <p class="options_btn">Add Exercise</p>
+        </div>
+        <div class="dashboard">
+        <div style="flex-grow: 1;">    
+            <header id="hp_header">
+                <div>
+                    <h2 style="padding-top: 1px; margin-left: 100px;" >URBAN YOGI LIFE</h2>
+                </div>
+                <div>
+                    <p>
+                        <a href="about_page.html" style="text-decoration: none; color: black;">
+                            <span id="hp_username">username</span>
+                            <img src="icons/user-solid.svg" alt="user_icon" class="user">
+                        </a>
+                    </p>        
+                </div>
+            </header>
+            <div style="margin-left: 80px; font-weight: 500;"><h2 id="welcomeMsg"></h2></div>
+        </div>
+            <main>
+                <section class="main_content">
+                    <div style="justify-items: center;">
+                        <h3 style="font-weight: 500;">What would you like to do today?</h3>    
+                    </div>
+                    <div class="exercise_options">
+                        <div>
+                            <button  onclick="window.location.href=`Body_parts.html`" id="simple">
+                                <h3>SIMPLE</h3>
+                            </button>
+                        </div>
+                        <div>
+                            <button onclick="window.location.href=`Body_parts.html`" id="medium">
+                               <h3>MEDIUM</h3>
+                            </button>
+                        </div>
+                        <div>   
+                            <button onclick="window.location.href=`Body_parts.html`" id="complex">
+                                <h3>COMPLEX</h3>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="homePage.js"></script>
+    </body>
+</html>
