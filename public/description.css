@@ -88,7 +88,6 @@ body {
     }
 
     #stopwatch-container {
-    display: flex;
     justify-content: center;
     align-content: center;
     height: 20%;
@@ -117,6 +116,6 @@ body {
     margin: 10px;
 }
 
-form label {
-  width: 10px;
+.radiobtn {
+  width: 15px;
 }
