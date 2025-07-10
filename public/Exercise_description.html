@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Push-Ups Exercise</title>
-  <link rel="stylesheet" href="description.css">
-</head>
-<body>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Push-Ups Exercise</title>
+    <link rel="stylesheet" href="description.css">
+    </head>
+    <body>
 
-  <div class="container">
-    <h1>Push-Ups</h1>
-    <div class="content">
-      <div class="text-section">
-        <div class="description">
-          <h3>Description:</h3>
-          <p>Push-ups are a bodyweight exercise that work your chest,
-            shoulders, triceps, and core. Start in a plank position, 
-            lower your body by bending your elbows, then push back up.</p>
-        </div>
-
-        <div class="benefits">
-          <h3>Benefits:</h3>
-          <ul>
-            <li>Strengthens upper body muscles</li>
-            <li>Improves core stability</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="button-section">
-        <button id = "btn_start" >Start Exercise</button>
-        <button id = "btn_stop" >Stop Exercise</button>
-            <button class="stopwatch-btns" id="btn-reset">RESET</button>
-      </div>
-    </div>
-    <hr>
-    <form>
-      <label for="">high</label>
-      <input type="radio" name="energylevel"><br>
-      <label for="">medium</label>
-      <input type="radio" name="energylevel"><br>
-      <label for="">low</label>
-      <input type="radio" name="energylevel"><br>
-    </form>
-    <div id="stopwatch-container">
-            <div id="stopwatch">
-                <h1 id="display">
-                00:00:00:000
-                </h1>
+    <div class="container">
+        <h1 id="ExerciseName"></h1>
+        <div class="content">
+        <div class="text-section">
+            <div class="description">
+            <h3>Exercise Steps:</h3>
+            <p id="ExerciseSteps"></p>
+            </div>
+            <div class="benefits">
+            <h3>Benefits:</h3>
+            <p id="Benefits"></p>
             </div>
         </div>
-        <div class="btn-container"> 
-            <button class="stopwatch-btns">SUBMIT</button>
+
+        <div class="button-section">
+            <button id = "btn_start" >Start Exercise</button>
+            <button id = "btn_stop" >Stop Exercise</button>
+                <button class="stopwatch-btns" id="btn-reset">RESET</button>
         </div>
-  </div>
-  <script src="clock.js">
-  </script>
+        </div>
+        <hr>
+        <div style="display: grid; grid-template-columns: 1fr 1fr;">
+            <div>
+            <p>Your Energy Level after the workout</p>
+
+            <form>
+                <label for="high">HIGH</label>
+                <input type="radio" name="energylevel" class="radiobtn" value="high"><br>
+                <label for="medium">MEDIUM</label>
+                <input type="radio" name="energylevel" class="radiobtn" value="medium"><br>
+                <label for="low">LOW</label>
+                <input type="radio" name="energylevel" class="radiobtn" value="low"><br>
+            </form>
+            </div>
+            <div>
+            <div id="stopwatch-container">
+                <div id="stopwatch">
+                    <h1 id="display">
+                    00:00:00:000
+                    </h1>
+                </div>
+                <div class="btn-container"> 
+                    <button type="submit" class="stopwatch-btns" id="submitBtn">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="clock.js">
+    </script>
 
 </body>
 </html>
