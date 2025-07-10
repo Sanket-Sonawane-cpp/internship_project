@@ -75,6 +75,15 @@ async function getExercise(diff, focus, part) {
     console.log(data);
 }
 
-
-
 getExercise(diff,focus,part);
+
+document.getElementById("submitBtn").addEventListener(`click`, () => {
+    const energylevel = document.querySelector("input[type=radio]:checked");
+    console.log(energylevel.value);
+    if(energylevel) {
+        window.alert(`your energy level is: ${energylevel.value}`);
+        
+    } else {
+        window.alert(`SELECT ENERGY LEVEL`);
+    }
+})
