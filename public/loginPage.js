@@ -24,25 +24,16 @@
         e.preventDefault();
         let verify = false;
         const name = document.getElementById('loginUsername').value;
-        const password = document.getElementById('logPassword').value;
-        const res = await fetch('/api/users');
+        const email = document.getElementById('logPassword').value;
+        console.log(email);
+        const res = await fetch(`/api/users?name=${name}&email=${email}`);
         data = await res.json();
-        for (const user of data) {
-            if(user.name === name) {
-                if(user.email === password) {
-                    console.log(`user found. Welcome ${name}`);
-                    verify = true;
-                    localStorage.setItem('username', user.name);
-                    break;
-                } else {
-                    window.alert("user not found");
-                    verify = false;
-                }
-            }
-        }
-
-        if(verify) {
+        console.log(data);
+        if(data !== null) {
+            localStorage.setItem('username', data[0].name);
             window.location.href = "try.html";
+        } else {
+            window.alert("User not found. Try again!");
         }
     })
     //document.getElementById("hp_username").textContent = data.name;
