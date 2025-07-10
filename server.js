@@ -52,11 +52,11 @@ app.post('/submit', async (req, res) => {
 
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
 
-// Route to fetch all saved user inputs
+// Route to fetch user inputs
 app.get('/api/users', async (req, res) => {
   try {
-    const {name, email} = req.query;
-    const users = await login_info.find();
+    const { name, email } = req.query;
+    const users = await login_info.find({["name"]:`${name}`, ["email"]:`${email}`});
     //console.log(users);
     res.json(users);
   } catch (err) {
