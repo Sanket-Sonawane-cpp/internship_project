@@ -1,3 +1,4 @@
+//Function to switch between login and sign up forms
 function switchDiv() {
     login_div = document.getElementById("login-container");
     signUp_div = document.getElementById("signUp-container");
@@ -15,12 +16,15 @@ function switchDiv() {
     }   
 }
 
+
+//function to switch to forgot password form
 function forgotPassword() {
     document.getElementById("login-container").style.display = "none" ;
     document.getElementById("signUp-container").style.display = "none" ;
     document.getElementById("forgotPassword-container").style.display = "block" ;
 }
 
+//SignUp Function
 document.getElementById('userSignup').addEventListener('submit', async function (e) {
   e.preventDefault();
 
