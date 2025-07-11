@@ -2,11 +2,17 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
     background: #78b4f0;
     font-family: Arial, sans-serif;
+}
+
+.header {
+    padding: 5px;
+    text-align: center;
+    background-color: black;
+    color: white;
 }
 
 .wrapper {
