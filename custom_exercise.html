@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Exercise</title>
+    <link rel="stylesheet" href="custom_exercise.css" />
+</head>
+
+<body>
+    <div class="newExercise-container" id="newExercise-container" style="display: block;">
+    <h2>Custom Exercise</h2>
+      <form id="CustomExercise">
+        <div class="input-group">
+          <label for="exerciseName">Exercise Name</label>
+          <input type="text" id="exerciseName" name="exerciseName" required />
+        </div>
+
+        <div class="input-group">
+          <label for="focusArea">Focus Area</label>
+          <select name="focusArea" id="focusArea">
+            <option disabled selected value></option>
+            <option value="Bone Mobility">Bone Mobility</option>
+            <option value="Muscle Strengthening">Muscle Strengthening</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="difficulty">Exercise Difficulty</label>
+          <select name="difficulty" id="difficulty">
+            <option disabled selected value></option>
+            <option value="Simple">Simple</option>
+            <option value="Medium">Medium</option>
+            <option value="Complex">Complex</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="targetPart">Target Body Part</label>
+          <select name="targetPart" id="targetPart">
+            <option disabled selected value></option>
+            <option value="Head">Head</option>
+            <option value="Neck">Neck</option>
+            <option value="Shoulders">Shoulders</option>
+            <option value="Chest">Chest</option>
+            <option value="Back">Back</option>
+            <option value="Abdomen">Abdomen</option>
+            <option value="Spine">Spine</option>
+            <option value="Ankles">Ankles</option>
+          </select>
+        </div>
+
+        <div class="input-group" id="duration">
+          <label for="numberOfTimes">Number of times to be done</label>
+          <input type="number" id="numberOfTimes" name="numberOfTimes" required />
+          <label for="uom">Unit of Measure</label>
+          <input type="text" id="uom" name="uom" required />
+        </div>
+
+        <div class="input-group">
+          <label for="exerciseSteps">Exercise Steps</label>
+          <input type="text" id="exerciseSteps" name="exerciseSteps" required />
+        </div>
+
+        <div class="input-group">
+          <label for="exerciseBenefit">Exercise Benefits</label>
+          <input type="text" id="exerciseBenefit" name="exerciseBenefit" required />
+        </div>
+
+        
+
+
+        <button type="submit" onclick="window.location.href='home_page.html'">Submit</button>
+        <button type="button" onclick="clearForm()">Cancel</button>
+      </form>
+    </div>
+
+  
+
+  <script src="customExercise.js"></script>
+</body>
+</html>
