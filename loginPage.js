@@ -42,8 +42,8 @@ document.getElementById('userSignup').addEventListener('submit', async function 
     body: JSON.stringify({ name, email, ph_no, pwd })
   });
 
+  //Debuuging message
   const msg = await res.text();
-  document.getElementById('responseMsg').innerText = msg;
 });
 
 
@@ -60,11 +60,11 @@ document.getElementById("userLogin").addEventListener('submit', async function (
     data = await res.json();
 
     if(data != null) {
-      //  localStorage.setItem('username', data[0].name);
-        window.alert("Login Successful");
-        window.location.href = "focus_area.html";
+    //  localStorage.setItem('username', data[0].name);
+        alert("Login Successful");
+        window.location.href = "home_page.html";
     } else {
-        window.alert("User not found. Try again!");
+        alert("User not found. Try again!");
     }
 })
 
