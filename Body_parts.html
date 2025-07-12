@@ -11,18 +11,23 @@
     <div class="header">
         <h1>Urban Yogi Lifestyle</h1>
     </div>
-    <div class = "wrapper" style="margin-top: 5vh;">
+    <div class = "wrapper" style="margin-top: 5vh">
         <h1>Select a Body part to Train</h1>
         <div class="button-container">  
-            <button>Head</button>
-            <button>Neck</button>
-            <button>Shoulders</button>
-            <button>Arms</button>
-            <button>Back</button>
-            <button>Core</button>
-            <button>Legs</button>
-            <button>Ankles</button>
+            <button onclick="window.location.href=`exercise_description.html?diff=${diff}&focuus=${focuus}&part=Head`">Head</button>
+            <button onclick="window.location.href=`exercise_description.html?diff=${diff}&focuus=${focuus}&part=Neck`">Neck</button>
+            <button onclick="window.location.href=`exercise_description.html?diff=${diff}&focuus=${focuus}&part=Shoulders`">Shoulders</button>
+            <button onclick="window.location.href=`exercise_description.html?diff=${diff}&focuus=${focuus}&part=Chest`">Chest</button>
+            <button onclick="window.location.href=`exercise_description.html?diff=${diff}&focuus=${focuus}&part=Back`">Back</button>
+            <button onclick="window.location.href=`exercise_description.html?diff=${diff}&focuus=${focuus}&part=Abdomen`">Abdomen</button>
+            <button onclick="window.location.href=`exercise_description.html?diff=${diff}&focuus=${focuus}&part=Spine`">Spine</button>
+            <button onclick="window.location.href=`exercise_description.html?diff=${diff}&focuus=${focuus}&part=Ankles`">Ankles</button>
         </div>
     </div>
+    <script>
+      const params = new URLSearchParams(window.location.search)
+      const diff = params.get('diff')
+      const focuus = params.get('focuus')
+    </script>
 </body>
 </html>
