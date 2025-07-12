@@ -13,8 +13,12 @@
   <div style="text-align: center; margin-top: 5vh;"><h1>Choose your Focus Area</h1></div>
 
   <div class="box">
-    <button onclick="window.location.href='Body_parts.html'">Muscle Training</button>
-    <button onclick="window.location.href='Body_parts.html'">Bone Strengthening</button>
+    <button onclick="window.location.href=`Body_parts.html?diff=${diff}&focuus=Muscle Strengthening`">Muscle Training</button>
+    <button onclick="window.location.href=`Body_parts.html?diff=${diff}&focuus=Bone Mobility`">Bone Strengthening</button>
   </div>
+  <script>
+    const params = new URLSearchParams(window.location.search)
+    const diff = params.get('diff')
+  </script>
 </body>
 </html>
