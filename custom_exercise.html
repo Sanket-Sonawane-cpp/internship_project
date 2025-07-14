@@ -55,7 +55,11 @@
           <label for="numberOfTimes">Number of times to be done</label>
           <input type="number" id="numberOfTimes" name="numberOfTimes" required />
           <label for="uom">Unit of Measure</label>
-          <input type="text" id="uom" name="uom" required />
+          <select name="uom" id="uom">
+            <option disabled selected value></option>
+            <option value="reps">Repetitions</option>
+            <option value="mins">Minutes</option>
+          </select>
         </div>
 
         <div class="input-group">

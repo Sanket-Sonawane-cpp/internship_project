@@ -10,12 +10,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background:  #78b4f0;
+  background:  #FFF4E0;
 }
 
 
 .newExercise-container {
-  background: #fff;
+  background: #FFFBF0;
   padding: 40px 30px;
   border-radius: 10px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
@@ -60,18 +60,18 @@ button {
   width: 100%;
   padding: 10px;
   margin-top: 20px;
-  background-color: #0e0e0f;
+  background-color: #F97316;
   border: none;
   border-radius: 6px;
-  color: white;
+  color: #FFFBF0;
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s ease;
 }
 
 button:hover {
-  background-color: #e6e6ef;
-  color: #0e0e0f;
+  background-color: #FFFBF0;
+  color: #F97316;
 }
 
 .other-text {
