@@ -1,22 +1,55 @@
+ :root {
+  --bg: #FFFBF0;
+  --card: #FFF4E0;
+  --text: #4B2E2E;
+  --accent: #F97316;
+  --muted: #7C5E57;
+}
+
+
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #78b4f0;
+    font-family: 'Georgia', serif;
+    background-color: var(--bg);
+    color: var(--text);
     justify-content: center;
+    background-color: var(--card);
     height: 100vh;
 }
 
 .header {
     padding: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
     text-align: center;
-    background-color: black;
+    background-color: var(--accent);
     color: white;
+    font-weight: bold;
+}
+
+.custom {
+    background-color: var(--text);
+    height: 50px;
+    align-self: center;
+    border-radius: 5px;
+    color: var(--bg);
+    width: 120px;
+    border: none;
+}
+.custom:hover {
+    color: var(--text);
+    background-color: var(--bg);
 }
 
 .box {
     text-align: center;
-    background: #78b4f0;
+    border-radius: 10px;
+    background-color:#FFFBF0;
+    margin-left: 150px;
+    margin-right: 150px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-evenly;
@@ -33,17 +66,27 @@ body {
     text-decoration: none;
     padding: 12px 20px;
     font-size: 26px;
-    background-color: black;
+    background-color: var(--accent);
     color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.3s ease-in;
     transition: width 1s;
 }
 
 
 .box button:hover {
-    background-color: white;
-    color: black;    
+    background-color: #EA580C;
+    box-shadow: none;
+}
+
+.user {
+    height: 20px; 
+    vertical-align: top;
+    text-decoration: none;
+    margin-left: 3px;
+    margin-top: -2.5px;
+    text-align: right;
 }
