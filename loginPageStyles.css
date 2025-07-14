@@ -10,11 +10,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: gray;
+  background: #FFFBF0;
 }
 
 .login-container {
-  background: #fff;
+  background: #FFF4E0;
   padding: 40px 30px;
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
@@ -24,11 +24,11 @@ body {
 .login-container h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #4B2E2E;
 }
 
 .signUp-container {
-  background: #fff;
+  background: #FFF4E0;
   padding: 40px 30px;
   border-radius: 10px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
@@ -38,7 +38,7 @@ body {
 .signUp-container h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #4B2E2E;
 }
 
 .input-group {
@@ -48,7 +48,7 @@ body {
 .input-group label {
   display: block;
   font-size: 14px;
-  color: #555;
+  color: #4B2E2E;
   margin-bottom: 5px;
 }
 
@@ -63,7 +63,7 @@ body {
 button {
   width: 100%;
   padding: 10px;
-  background-color: #0e0e0f;
+  background-color: #F97316;
   border: none;
   border-radius: 6px;
   color: white;
@@ -73,8 +73,8 @@ button {
 }
 
 button:hover {
-  background-color: #e6e6ef;
-  color: #0e0e0f;
+  background-color: #FFF4E0;
+  color: #F97316;
 }
 
 .other-text {
