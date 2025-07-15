@@ -60,7 +60,7 @@ document.getElementById("userLogin").addEventListener('submit', async function (
     data = await res.json();
 
     if(data != null) {
-    //  localStorage.setItem('username', data[0].name);
+        localStorage.setItem('username', name);
         alert("Login Successful");
         window.location.href = "home_page.html";
     } else {
