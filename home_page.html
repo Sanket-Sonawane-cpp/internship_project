@@ -2,50 +2,96 @@
 <html>
     <head>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <title>Urban Yogi Life</title>
+        <title>URBAN YOGI LIFE</title>
         <link rel="stylesheet" href="home_page.css">
+    </head>
     <body>
-        <div class="header">
-            <button id="custom" class="custom" onclick="window.location.href='custom_exercise.html'">
-                <h3>Add Exercise</h3>
-            </button>
-            <h1>Urban Yogi Lifestyle</h1>
-            <div style="align-self: center;">
-                <p>
-                    <a href="about_page.html" style="text-decoration: none; color: white;">Username
-                    <img src="icons/user-solid.svg" alt="user_icon" class="user"></a>
-                </p>        
-            </div>
-        </div>
-
-
         <div class="options">
             <div>
                 <p>HOW CAN WE HELP YOU</p>
             </div> 
+            <a href="#" class="options_btn">Progress</a>
+            <a href="#" class="options_btn">Create plan</a>
+            <a href="#" class="options_btn">Your Subscriptions</a>
+            <a href="custom_exercise.html" class="options_btn">Add Exercise</a>
         </div>
         <div class="dashboard">
+        <div style="flex-grow: 1;">    
+            <header id="hp_header">
+                <div>
+                    <h2 style="padding-top: 1px; margin-left: 105px;" >URBAN YOGI LIFE</h2>
+                </div>
+                <div>
+                    <p>
+                        <a href="about_page.html" style="text-decoration: none;">
+                            <span id="hp_username">Username</span>
+                            <img src="icons/user-icon.png" alt="user_icon" class="user">
+                        </a>
+                    </p>        
+                </div>
+            </header>
+            <div style="margin-left: 80px; font-weight: 500;"><h2 id="welcomeMsg"></h2></div>
+        </div>
             <main>
                 <section class="main_content">
-                    <div class="exercise_options">
-                        <div>
-                            <button id="btn1" onclick="window.location.href='focus_area.html?diff=Simple'">
-                                <h3>SIMPLE</h3>
-                            </button>
+                    <div class="container">
+                        <div id="progress_tracker">
+                            <span style="text-align: center; display: block; margin-bottom:10px;">YOUR PROGRESS</span>        
+                            <table id="exercise_table">
+                                <tr>
+                                    <th>Exercise ID</th>
+                                    <th>Exercise Name</th>
+                                    <th>Focus Area</th>
+                                    <th>Count</th>
+                                </tr>
+                                <tr>
+                                    <td>686bb1997542c1e3e2f1bc80</td>
+                                    <td>Neck Circles<td>
+                                    <td>simple</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>686bb1997542c1e3e2f1bc80</td>
+                                    <td>Neck Circles<td>
+                                    <td>simple</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>686bb1997542c1e3e2f1bc80</td>
+                                    <td>Neck Circles<td>
+                                    <td>simple</td>
+                                    <td>9</td>
+                                </tr>
+                            </table>                
                         </div>
-                        <div>
-                            <button id="btn2" onclick="window.location.href='focus_area.html?diff=Medium'">
-                               <h3>MEDIUM</h3>
-                            </button>
-                        </div>
-                        <div>   
-                            <button id="btn3" onclick="window.location.href='focus_area.html?diff=Complex'">
-                                <h3>COMPLEX</h3>
-                            </button>
+                        <div id="doughnut">
+                            <canvas id="myChart"></canvas>
                         </div>
                     </div>
-                </section>
+                <div style="justify-items: center;">
+                    <h3 style="font-weight: 500;">What would you like to do today?</h3>    
+                </div>
+                <div class="exercise_options">
+                    <div>
+                        <button  onclick="window.location.href=`Body_parts.html`" id="simple">
+                            <h3>SIMPLE</h3>
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="window.location.href=`Body_parts.html`" id="medium">
+                            <h3>MEDIUM</h3>
+                        </button>
+                    </div>
+                    <div>   
+                        <button onclick="window.location.href=`Body_parts.html`" id="complex">
+                            <h3>COMPLEX</h3>
+                        </button>
+                    </div>
+                </div>
+            </section>
             </main>
-        </div>
-    </body>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"></script>
+            <script src="homePage.js"></script>
+</body>
 </html>

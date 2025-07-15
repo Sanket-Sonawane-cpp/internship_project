@@ -1,45 +1,27 @@
-* {
-  box-sizing: border-box;
+:root {
+  --bg: #FFFBF0;
+  --card: #FFF4E0;
+  --text: #4B2E2E;
+  --accent: #F97316;
+  --muted: #7C5E57;
 }
-
+* {
+    font-family: 'Georgia', serif;
+    box-sizing: border-box;
+}
 
 body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background-image: linear-gradient(to bottom, rgb(45, 255, 185), rgb(218, 255, 243));
-  font-family: Arial, sans-serif;
-}
-
-.header {
-    padding: 5px;
     display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-between;
-    text-align: center;
-    background-color: black;
-    color: white;
-}
-
-.custom {
-    background-color: powderblue;
-    height: 50px;
-    align-self: center;
-    border-radius: 5px;
-    color: black;
-    width: 120px;
-    border: none;
-}
-.custom:hover {
-    background-color: black;
-    color: powderblue;
-
+    grid-template-columns: 1fr 9fr;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    background-color: var(--card);
+    color: var(--text);  
 }
 
 .dashboard {
-    display: inline-block; 
     height: 100%; 
-    width: 88%; 
     margin: 0;
 }
 
@@ -48,49 +30,126 @@ body {
     text-align: center;
     height: 100px;
     display: grid;
-    grid-template-columns: 6fr 1fr;
+    grid-template-columns: 6fr 2fr;
+    background-color: var(--accent);
 }
 #hp_header div {
     height: inherit;
     align-content: center;
 }
-#hp_header div p {
-    font-size: large;
-    font-weight: 500;
-    color:rgb(0, 0, 0);
+#hp_header div h2 {
+    color: var(--card); 
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
+
+#hp_header div p {
+    text-align: right;
+    margin-right: 20px;
+    height: 30px;
+}
+
+#hp_username {
+    color: var(--card); 
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
 .user {
     height: 20px; 
-    vertical-align: top;
     text-decoration: none;
     margin-left: 3px;
-    text-align: right;
 }
 
 .options {
-    width: 10%;
+    background-color: #FFFBF0;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     height: 100%;
     vertical-align: top;
-    border: 1px solid black;
-    background-color: aliceblue;
     display: inline-block;
+    margin: 0;
 }
 
 .options div {
     height: 100px;
+    align-content: center;
 }
 
 .options div p {
     padding: 10px;
     text-align: center;
+    margin: 0;
+}
+
+.options_btn {
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    color: var(--text);
+}
+.options_btn:hover {
+    box-shadow: 1px 1px 10px rgb(229, 226, 226);
+    background-color: #FFF4E0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+
+}
+
+table, th, td {
+  border: 1px solid;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+td, th {
+  padding: 8px;
+}
+
+.list {
+  cursor: pointer;
+}
+
+.list:hover {
+  box-shadow: 0px 0px 5px #7C5E57;
 }
 
 
+#progress_tracker {
+    
+    width: 110%;
+    display: inline-block;
+    border: 1px solid var(--bg);
+    margin: 0px 10px;
+  padding: 15px;
+  border-radius: 5px;   
+  box-shadow:0px 4px 10px  #4B2E2E;
+}
 
+#doughnut {
+    margin: 0px 10px;
 
+  border: 1px solid var(--bg);
+
+  padding: 15px;
+  border-radius: 5px;
+  background-color: var(--card);
+  box-shadow:0px 4px 10px  #4B2E2E;
+  display: inline-block;
+}
 
 .exercise_options {
     display: grid;
@@ -119,141 +178,24 @@ body {
     color: aliceblue;
 }
 .exercise_options div button:hover {
-    width: 21vw;
-    height: 26vh;
-    box-shadow: 0px 0px 15px black;
+    width: 20.5vw;
+    height: 25.5vh;
+    box-shadow: 0px 0px 8px black;
 }
 
-#btn1 {
+#simple {
     background-image: url(icons/Main_Benefitsofexercise.jpg);
     background-position:center;
     background-size: cover;
 }
 
-#btn2 {
+#medium {
     background-image: url(icons/medium.jpg);
     background-position:center;
     background-size: cover;
 }
 
-#btn3 {
-    background-image: url(icons/complex.jpg);
-    background-position:center;
-    background-size: cover;
-}* {
-  box-sizing: border-box;
-}
-
-
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background-image: linear-gradient(to bottom, rgb(45, 255, 185), rgb(218, 255, 243));
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.dashboard {
-    display: inline-block; 
-    height: 100%; 
-    width: 88%; 
-    margin: 0;
-}
-
-#hp_header {
-    position: sticky;
-    text-align: center;
-    height: 100px;
-    display: grid;
-    grid-template-columns: 6fr 1fr;
-}
-#hp_header div {
-    height: inherit;
-    align-content: center;
-}
-#hp_header div p {
-    font-size: large;
-    font-weight: 500;
-    color:rgb(0, 0, 0);
-}
-.user {
-    height: 20px; 
-    vertical-align: top;
-    text-decoration: none;
-    margin-left: 3px;
-    text-align: right;
-}
-
-.options {
-    width: 10%;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    vertical-align: top;
-    border: 1px solid black;
-    background-color: aliceblue;
-    display: inline-block;
-}
-
-.options div {
-    height: 100px;
-}
-
-.options div p {
-    padding: 10px;
-    text-align: center;
-}
-
-
-
-
-
-.exercise_options {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 10px 5px;
-    flex-shrink: 0;
-    height: 25vh;
-}
-
-.exercise_options div {
-    text-align: center;
-    height: 100%;
-}
-
-.exercise_options div button {    
-    border: 1px solid black;
-    width: 20vw;
-    height: 25vh;
-    cursor: pointer;
-    transition: 0.2s;
-    border-radius: 5vh;
-    border: none;
-}
-
-.exercise_options div button h3 {
-    color: aliceblue;
-}
-.exercise_options div button:hover {
-    width: 21vw;
-    height: 26vh;
-    box-shadow: 0px 0px 15px black;
-}
-
-#btn1 {
-    background-image: url(icons/simple.jpg);
-    background-position:center;
-    background-size: cover;
-}
-
-#btn2 {
-    background-image: url(icons/medium.jpg);
-    background-position:center;
-    background-size: cover;
-}
-
-#btn3 {
+#complex {
     background-image: url(icons/complex.jpg);
     background-position:center;
     background-size: cover;
