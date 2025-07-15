@@ -1,14 +1,16 @@
+const username = localStorage.getItem('username');
+document.getElementById('hp_username').textContent = username
+
 let bodyPart;
 
 function mclick(btnid) {
     bodyPart = `${btnid}`
     localStorage.setItem('bodyPart', bodyPart);
-    window.location.href='Exercise_description.html';
+    window.location.href='exercise_table.html';
 }
 
 function mouseover(pid) {
         const para = document.getElementById(`${pid}`);
-        para.textContent = "Exercise completed 1/3";
         para.style.fontSize = "10px";
         para.style.display = "block";
 }

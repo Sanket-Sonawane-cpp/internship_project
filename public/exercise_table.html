@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>
@@ -7,13 +8,15 @@
     </head>
     <body>
         <header id="hp_header">
+                        <div><button id="backbtn" onclick="window.location.href=`Body_parts.html`">Go back</button></div>
+
             <div>
-                <h3 style="padding-top: 1px; margin-left: 300px;">URBAN YOGI LIFE</h3>
+                <h3 style="padding-top: 1px;">URBAN YOGI LIFE</h3>
             </div>
             <div>
                 <p>
                     <a href="about_page.html" style="text-decoration: none; color: black;">
-                        <span id="hp_username"></span>
+                        <span id="hp_username">Username</span>
                         <img src="icons/user-solid.svg" alt="user_icon" class="user">
                     </a>
                 </p>        
@@ -25,12 +28,12 @@
                 <tr>
                     <th>Exercise ID</th>
                     <th>Exercise Name</th>
-                    <th style="width: 30%;">Benefits</th>
+                    <th style="width: 30%;">Description</th>
                     <th>Focus Area</th>
+                    <th>Count</th>
                 </tr>
-                
             </table>
         </main>
-        <script></script>
+        <script src="exercise_table.js"></script>
     </body>
 </html>

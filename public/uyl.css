@@ -1,69 +1,28 @@
-/* .home_page {
-    display: grid;
-    grid-template-rows: 60px 1fr;
-    grid-template-columns: 1fr 7fr;
-    height: 100%;
+
+:root {
+  --bg: #FFFBF0;
+  --card: #FFF4E0;
+  --text: #4B2E2E;
+  --accent: #F97316;
+  --muted: #7C5E57;
 }
-
-.hp_header {
-    background-color: aquamarine; text-align: center;
-    box-shadow: 0px 0px 10px black;
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-}
-
-
-
-.hdr_sctns {
-    display: inline-block;
-}
-
-#main_hp {
-    display: grid;
-    grid-template-rows: 2fr 1fr;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-
-#progress_board {
-    height: 300px;
-    width: 600px;
-    background: linear-gradient(to bottom, rgb(162, 255, 224) , #ccf2e6 );
-    display: grid;
-    grid-template-columns:  2fr 1fr;
-    overflow: hidden;
-    border: none;
-} */
-
-
-
-/* #hp_header {
-    position: sticky;
-    background-color: aquamarine; text-align: center;
-    box-shadow: 0px 0px 10px black;
-    height: 100px;
-    display: grid;
-    grid-template-columns: 150px 6fr 1fr;
-} */
-
 * {
-  box-sizing: border-box;
+    font-family: 'Georgia', serif;
+    box-sizing: border-box;
 }
-
 
 body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background-image: linear-gradient(to bottom, rgb(45, 255, 185), rgb(218, 255, 243));
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--card);
+    color: var(--text);  
 }
 
 .dashboard {
-    display: inline-block; 
     height: 100%; 
-    width: 88%; 
     margin: 0;
 }
 
@@ -73,37 +32,45 @@ body {
     height: 100px;
     display: grid;
     grid-template-columns: 6fr 2fr;
+    background-color: var(--accent);
 }
 #hp_header div {
     height: inherit;
     align-content: center;
 }
 #hp_header div h2 {
-    font-weight: 500;
-    color:rgb(0, 0, 0);
+    color: var(--card); 
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 
 #hp_header div p {
-    font-size: large;
-    font-weight: 500;
-    color:rgb(0, 0, 0);
+    text-align: right;
+    margin-right: 20px;
+    height: 30px;
 }
+
+#hp_username {
+    color: var(--card); 
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
 .user {
     height: 20px; 
-    vertical-align: top;
     text-decoration: none;
     margin-left: 3px;
-    text-align: right;
 }
 
 .options {
-    width: 10%;
+    background-color: #FFFBF0;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     height: 100%;
     vertical-align: top;
-    background-color: aliceblue;
     display: inline-block;
     margin: 0;
 }
@@ -124,9 +91,13 @@ body {
     text-align: center;
     margin: 0;
     cursor: pointer;
+    text-decoration: none;
+    display: block;
+    color: var(--text);
 }
 .options_btn:hover {
     box-shadow: 1px 1px 10px rgb(229, 226, 226);
+    background-color: #FFF4E0;
 }
 
 .exercise_options {

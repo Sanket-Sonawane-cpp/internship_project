@@ -1,6 +1,20 @@
+* {
+  box-sizing: border-box;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+  color: var(--text);
+}
+
+:root {
+  --bg: #FFFBF0;
+  --card: #FFF4E0;
+  --text: #4B2E2E;
+  --accent: #F97316;
+  --muted: #7C5E57;
+}
+
+
 body {
-      font-family: Arial, sans-serif;
-      background:  #78b4f0;
+      background: var(--muted);
       margin: 0;
       padding: 0;
       display: flex;
@@ -9,8 +23,30 @@ body {
       height: 100vh;
     }
 
+
+    #backbtn {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+  width: 8%;
+  padding: 10px;
+  background-color: var(--card);
+  border: none;
+  border-radius: 6px;
+  color: var(--muted);
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+}
+
+#backbtn:hover {
+
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
     .container {
-      background: white;
+      background: var(--card);
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -21,7 +57,7 @@ body {
 
     h1 {
       text-align: center;
-      color: #333;
+ 
     }
 
     .content {
@@ -87,6 +123,17 @@ body {
       color: red;
     }
 
+#btn-reset {
+          padding: 12px 24px;
+      background-color: var(--muted);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      height: 50px;
+}
+
     #stopwatch-container {
     justify-content: center;
     align-content: center;
@@ -118,4 +165,32 @@ body {
 
 .radiobtn {
   width: 15px;
+}
+
+
+#btn_stop:disabled, #btn_start:disabled{
+      color: white;
+      background-color: gray;
+      cursor: not-allowed;  
+      pointer-events: none;
+    }
+
+#submitBtn {
+        padding: 12px 24px;
+      background-color: var(--muted);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      height: 50px;
+}
+
+#submitBtn:hover {
+      background-color: white;
+      color: red;
+    }
+
+#display {
+  font-family: Arial, sans-serif;
 }

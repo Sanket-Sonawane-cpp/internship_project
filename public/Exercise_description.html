@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="description.css">
     </head>
     <body>
-
+    <div><button id="backbtn" onclick="window.location.href=`exercise_table.html`">Go back</button></div>   
     <div class="container">
         <h1 id="ExerciseName"></h1>
         <div class="content">
@@ -20,12 +20,16 @@
             <h3>Benefits:</h3>
             <p id="Benefits"></p>
             </div>
+            <div class="count">
+                <h3>Minimum Count / Duration</h3>
+            <p id="count"></p>
+            </div>
         </div>
 
         <div class="button-section">
             <button id = "btn_start" >Start Exercise</button>
-            <button id = "btn_stop" >Stop Exercise</button>
-                <button class="stopwatch-btns" id="btn-reset">RESET</button>
+            <button id = "btn_stop" disabled = true;>Stop Exercise</button>
+            <button class="stopwatch-btns" id="btn-reset" style="display: none;">RESET</button>
         </div>
         </div>
         <hr>
@@ -44,9 +48,9 @@
             </div>
             <div>
             <div id="stopwatch-container">
-                <div id="stopwatch">
+                <div id="stopwatch" style="display: none;">
                     <h1 id="display">
-                    00:00:00:000
+                    00:00:00:00
                     </h1>
                 </div>
                 <div class="btn-container"> 
@@ -55,7 +59,7 @@
             </div>
         </div>
     </div>
-    <script src="clock.js">
+    <script src="exercise_description.js">
     </script>
 
 </body>

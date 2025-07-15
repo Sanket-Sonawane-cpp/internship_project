@@ -1,51 +1,37 @@
-/*const exercises = require("../models/exercises");
 const username = localStorage.getItem('username');
-if(username !== null) {
-    document.getElementById('hp_username').textContent = username
-    let endIndex = username.indexOf(" ");
-    const name = username.slice(0, endIndex);
-    document.getElementById("welcomeMsg").textContent = `Welcome ${name}!`
-}
+document.getElementById('hp_username').textContent = username
 
-const difficulty = localStorage.getItem('difficulty');
-const focusArea = localStorage.getItem('focusArea');
-const bodyPart = localStorage.getItem('bodyPart');
+
+let diff = localStorage.getItem('difficulty');
+let focuus = localStorage.getItem('focusArea');
+let part = localStorage.getItem('bodyPart');
 let data;
-async function loadExercises() {
 
-    const response = await fetch('/api/exercises');
-    data = await response.json();
-    console.log("Simple exercises:", data[0,10]);
-    data = data.filter(item => item["Exercise Type"] === difficulty);
-    data = data.filter(item => item["Focus Area"] === focusArea);
-    data = data.filter(item => item["Target Body Part"] === bodyPart);
-}
-//loadExercises(); // call the async function
-
-function createTable() {
-    const table = document.getElementById("exercise_table");
-    a = document.createElement("tr");
-    a.td = `${data}`
-    console.log(a);
-} */
-
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-
-const app = express();
-
-
-// MongoDB Connection
-mongoose.connect('mongodb://127.0.0.1:27017/userInputs', {
-}).then(() => console.log('MongoDB connected'))
-  .catch(err => console.log(err));
-
-const exer = require(`../models/exercises`);
-
-async function getExercise() {
-    const data = await exer.find({["Target Body Part"]:"Head", ["Focus Area"]: ""});
+async function getExercise(diff, focuus, part) {
+    const res = await fetch(`./api/exercises/${focuus}/${part}`);
+    data = await res.json();
     console.log(data);
+    const table_id = document.getElementById("exercise_table");
+    const users = data.users;
+    for(const exercise of users) {
+        console.log(exercise)
+         const html_div = 
+        `<tr class="list" onclick="nextPage('${exercise["_id"]}')">
+            <td>${exercise["_id"]}</td>
+            <td>${exercise["Exercise Name"]}</td>
+            <td>${exercise["Exercise Steps"]}</td>
+            <td>${exercise["Exercise Type"]}</td>
+            <td>9</td>
+        </tr>
+        `
+        table_id.innerHTML = table_id.innerHTML + html_div; 
+    } 
 }
 
-getExercise();
+getExercise(diff,focuus,part);
+
+let id;
+function nextPage(id) {
+    localStorage.setItem('id', id);
+    window.location.href=`Exercise_description.html`
+}

@@ -10,3 +10,6 @@ document.getElementById("MuscleTraining").addEventListener('click', () => {
     localStorage.setItem('focusArea', focusArea);
     window.location.href='Body_parts.html';
 })
+
+const username = localStorage.getItem('username');
+document.getElementById('hp_username').textContent = username

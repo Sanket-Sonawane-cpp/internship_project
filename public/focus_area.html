@@ -1,17 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Focus Area</title>
-    <link rel="stylesheet" href="focus_area_styles.css" />
+	<meta charset="UTF-8">
+	<title>Focus Area</title>
+	<link rel="stylesheet" href="focus_area_styles.css" />
 </head>
 <body>
-  <div><h1>Choose your Focus Area</h1></div>
-  <div class="box">
-    <button id="MuscleTraining">Muscle Training</button>
-    <button id="BoneStrengthening">Bone Strengthening</button>
-  </div>
-  <script src="focusArea.js"></script>
+	<header id="hp_header">
+		<div><button id="backbtn" onclick="window.location.href=`try.html`">Go back</button></div>
+		<div>
+			<h3 style="padding-top: 1px;">URBAN YOGI LIFE</h3>
+		</div>
+		<div>
+			<p>
+				<a href="about_page.html" style="text-decoration: none; color: black;">
+					<span id="hp_username">Username</span>
+					<img src="icons/user-solid.svg" alt="user_icon" class="user">
+				</a>
+			</p>        
+		</div>
+	</header>
+	<div><h1 style="text-align: center;">Choose your Focus Area</h1></div>
+	<div class="box">
+		<button id="MuscleTraining">Muscle Training</button>
+		<button id="BoneStrengthening">Bone Strengthening</button>
+	</div>
+
+	<script src="focusArea.js"></script>
 </body>
 </html>
