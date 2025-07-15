@@ -37,29 +37,64 @@
         </div>
             <main>
                 <section class="main_content">
-                    <div style="justify-items: center;">
-                        <h3 style="font-weight: 500;">What would you like to do today?</h3>    
+                    <div class="container">
+                        <div id="progress_tracker">
+                            <span style="text-align: center; display: block; margin-bottom:10px;">YOUR PROGRESS</span>        
+                            <table id="exercise_table">
+                                <tr>
+                                    <th>Exercise ID</th>
+                                    <th>Exercise Name</th>
+                                    <th>Focus Area</th>
+                                    <th>Count</th>
+                                </tr>
+                                <tr>
+                                    <td>686bb1997542c1e3e2f1bc80</td>
+                                    <td>Neck Circles<td>
+                                    <td>simple</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>686bb1997542c1e3e2f1bc80</td>
+                                    <td>Neck Circles<td>
+                                    <td>simple</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>686bb1997542c1e3e2f1bc80</td>
+                                    <td>Neck Circles<td>
+                                    <td>simple</td>
+                                    <td>9</td>
+                                </tr>
+                            </table>                
+                        </div>
+                        <div id="doughnut">
+                            <canvas id="myChart"></canvas>
+                        </div>
                     </div>
-                    <div class="exercise_options">
-                        <div>
-                            <button  onclick="window.location.href=`Body_parts.html`" id="simple">
-                                <h3>SIMPLE</h3>
-                            </button>
-                        </div>
-                        <div>
-                            <button onclick="window.location.href=`Body_parts.html`" id="medium">
-                               <h3>MEDIUM</h3>
-                            </button>
-                        </div>
-                        <div>   
-                            <button onclick="window.location.href=`Body_parts.html`" id="complex">
-                                <h3>COMPLEX</h3>
-                            </button>
-                        </div>
+                <div style="justify-items: center;">
+                    <h3 style="font-weight: 500;">What would you like to do today?</h3>    
+                </div>
+                <div class="exercise_options">
+                    <div>
+                        <button  onclick="window.location.href=`Body_parts.html`" id="simple">
+                            <h3>SIMPLE</h3>
+                        </button>
                     </div>
-                </section>
+                    <div>
+                        <button onclick="window.location.href=`Body_parts.html`" id="medium">
+                            <h3>MEDIUM</h3>
+                        </button>
+                    </div>
+                    <div>   
+                        <button onclick="window.location.href=`Body_parts.html`" id="complex">
+                            <h3>COMPLEX</h3>
+                        </button>
+                    </div>
+                </div>
+            </section>
             </main>
-        </div>
-        <script src="homePage.js"></script>
-    </body>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"></script>
+            <script src="homePage.js"></script>
+</body>
 </html>

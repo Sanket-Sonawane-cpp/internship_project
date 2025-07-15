@@ -16,7 +16,7 @@ body {
     grid-template-columns: 1fr 9fr;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: fit-content;
     background-color: var(--card);
     color: var(--text);  
 }
@@ -98,6 +98,58 @@ body {
 .options_btn:hover {
     box-shadow: 1px 1px 10px rgb(229, 226, 226);
     background-color: #FFF4E0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+
+}
+
+table, th, td {
+  border: 1px solid;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+td, th {
+  padding: 8px;
+}
+
+.list {
+  cursor: pointer;
+}
+
+.list:hover {
+  box-shadow: 0px 0px 5px #7C5E57;
+}
+
+
+#progress_tracker {
+    
+    width: 110%;
+    display: inline-block;
+    border: 1px solid var(--bg);
+    margin: 0px 10px;
+  padding: 15px;
+  border-radius: 5px;   
+  box-shadow:0px 4px 10px  #4B2E2E;
+}
+
+#doughnut {
+    margin: 0px 10px;
+
+  border: 1px solid var(--bg);
+
+  padding: 15px;
+  border-radius: 5px;
+  background-color: var(--card);
+  box-shadow:0px 4px 10px  #4B2E2E;
+  display: inline-block;
 }
 
 .exercise_options {

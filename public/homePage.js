@@ -30,3 +30,38 @@ document.getElementById("complex").addEventListener('click', () => {
     localStorage.setItem('difficulty', difficulty);
     window.location.href='focus_area.html';
 })
+
+const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Simple', 'Medium', 'Complex', 'Not Done'],
+      datasets: [{
+        label: 'Your Progress',
+        data: [10, 5, 2, 103],
+        backgroundColor: [
+        '#f6d75bff', // Red
+        '#36a2eb', // Blue
+        '#ff2c2cff',  // Yellow
+        '#727272ff'
+        ],
+        borderColor: '#ffffffff',
+        borderWidth: 1
+    }]
+    },
+    options: {
+  plugins: {
+    legend: {   
+        labels: {
+            color: '#4B2E2E',
+            font: {
+                family: 'Georgia'
+            }
+        },
+          position: 'bottom', // or 'bottom', 'left', 'right'
+    }
+  }
+}
+   
+  });
