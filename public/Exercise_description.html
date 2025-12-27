@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Push-Ups Exercise</title>
+    <link rel="stylesheet" href="description.css">
+    </head>
+    <body>
+    <div><button id="backbtn" onclick="history.back()">Go back</button></div>   
+    <div class="container">
+        <h1 id="ExerciseName"></h1>
+        <div class="content">
+        <div class="text-section">
+            <div class="description">
+            <h3>Exercise Steps:</h3>
+            <p id="ExerciseSteps"></p>
+            </div>
+            <div class="benefits">
+            <h3>Benefits:</h3>
+            <p id="Benefits"></p>
+            </div>
+            <div class="count">
+                <h3>Minimum Count / Duration</h3>
+            <p id="count"></p>
+            </div>
+        </div>
+
+        <div class="button-section">
+            <button id = "btn_start" >Start Exercise</button>
+            <button id = "btn_stop" disabled = true;>Stop Exercise</button>
+            <button class="stopwatch-btns" id="btn-reset" style="display: none;">RESET</button>
+        </div>
+        </div>
+        <hr>
+        <div style="display: grid; grid-template-columns: 1fr 1fr;">
+            <div>
+            <p>Your Energy Level after the workout</p>
+
+            <form>
+                <label for="high">HIGH</label>
+                <input type="radio" name="energylevel" class="radiobtn" value="high"><br>
+                <label for="medium">MEDIUM</label>
+                <input type="radio" name="energylevel" class="radiobtn" value="medium"><br>
+                <label for="low">LOW</label>
+                <input type="radio" name="energylevel" class="radiobtn" value="low"><br>
+            </form>
+            </div>
+            <div>
+            <div id="stopwatch-container">
+                <div id="stopwatch" style="display: none;">
+                    <h1 id="display">
+                    00:00:00:00
+                    </h1>
+                </div>
+                <div class="btn-container"> 
+                    <button type="submit" class="stopwatch-btns" id="submitBtn">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="exercise_description.js">
+    </script>
+
+</body>
+</html>

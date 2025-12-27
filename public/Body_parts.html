@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Select a Body part</title>
+  <link rel="stylesheet" href="Body_parts.css" />
+</head>
+
+<body>
+        <header id="hp_header">
+            <div><button id="backbtn" onclick="history.back()">Go back</button></div>
+            <div>
+                <h3 style="padding-top: 1px;">URBAN YOGI LIFE</h3>
+            </div>
+            <div>
+                <p>
+                    <a href="about_page.html" style="text-decoration: none; color: black;">
+                        <span id="hp_username">Username</span>
+                        <img src="icons/user-solid.svg" alt="user_icon" class="user">
+                    </a>
+                </p>        
+            </div>
+        </header>
+    <div class = "wrapper">
+        <h1 style="text-align: center;">Select a Body part to Train</h1>
+       
+            <button class="btn" onclick="mclick(`Head`)" onmouseenter="mouseover(`headProg`)" onmouseleave="mouseleaves(`headProg`)">Head</button>
+            <button class="btn" onclick="mclick(`Neck`)" onmouseenter="mouseover(`neckProg`)" onmouseleave="mouseleaves(`neckProg`)">Neck</button>
+            <button class="btn" onclick="mclick(`Shoulders`)" onmouseenter="mouseover(`shoulderProg`)" onmouseleave="mouseleaves(`shoulderProg`)">Shoulders</button>
+            <button class="btn" onclick="mclick(`Arms`)" onmouseenter="mouseover(`armsProg`)" onmouseleave="mouseleaves(`armsProg`)">Arms</button>
+            <button class="btn" onclick="mclick(`Back`)" onmouseenter="mouseover(`backProg`)" onmouseleave="mouseleaves(`backProg`)">Back</button>
+            <button class="btn" onclick="mclick(`Core`)" onmouseenter="mouseover(`coreProg`)" onmouseleave="mouseleaves(`coreProg`)">Core</button>
+            <button class="btn" onclick="mclick(`Feet`)" onmouseenter="mouseover(`legsProg`)" onmouseleave="mouseleaves(`legsProg`)">Legs</button>
+            <button class="btn" onclick="mclick(`Ankles`)" onmouseenter="mouseover(`anklesProg`)" onmouseleave="mouseleaves(`anklesProg`)">Ankles</button>
+
+    </div>
+    <script src="Body_parts.js"></script>
+</body>
+</html>

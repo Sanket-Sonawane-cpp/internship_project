@@ -1,0 +1,122 @@
+:root {
+  --bg: #FFFBF0;
+  --card: #FFF4E0;
+  --text: #4B2E2E;
+  --accent: #F97316;
+  --muted: #7C5E57;
+}
+
+* {
+    font-family: 'Georgia', serif;
+    box-sizing: border-box;
+}
+
+* {
+    font-family: 'Georgia', serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;  
+  color: var(--text);  
+  font-family: 'Georgia', serif;
+  background-color: var(--card);
+}
+
+#hp_header {
+    background-color: var(--accent);
+    position: sticky;
+    text-align: center;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+  }
+  #hp_header div {
+    height: inherit;
+    align-content: center;
+  }
+  #hp_header div h3 {
+    color: var(--card);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+#backbtn {
+
+  width: 40%;
+  padding: 10px;
+  background-color: var(--card);
+  border: none;
+  border-radius: 6px;
+  color: var(--accent);
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+}
+
+#backbtn:hover {
+
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.user {
+    height: 20px; 
+    text-decoration: none;
+    margin-left: 3px;
+}
+
+#hp_username {
+    color: var(--card); 
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+#hp_header div p {
+    text-align: right;
+    margin-right: 20px;
+    height: 30px;
+}
+
+.box {
+    justify-self: center;
+    text-align: center;
+    background: var(--bg);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 70vh;
+    gap: 30vh;
+    width: fit-content;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+
+.box button {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 26px;
+    background-color: var(--accent);
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition:  0.3s;
+
+}
+
+
+.box button:hover {
+    background-color: #ff7023;
+    box-shadow: none;
+}
